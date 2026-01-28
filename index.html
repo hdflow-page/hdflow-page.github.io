@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="HDFlow: Hierarchical Diffusion-Flow Planning for Long-horizon Robotic Assembly">
+    content="HDFlow: Hierarchical Diffusion-Flow Planning for Long-horizon Tasks">
   <meta name="keywords" content="Robotics, Assembly, Planning, Diffusion, Hierarchical">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    HDFlow: Hierarchical Diffusion-Flow Planning for Long-horizon Robotic Assembly
+    HDFlow: Hierarchical Diffusion-Flow Planning for Long-horizon Tasks
   </title>
 
   <link rel="apple-touch-icon" sizes="57x57"
@@ -30,14 +30,14 @@
   <link rel="apple-touch-icon" sizes="180x180"
     href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-180x180.png" />
 
-  <link rel="icon" type="image/svg" href="./static/images/pku.svg"
+  <!-- <link rel="icon" type="image/svg" href="./static/images/pku.svg"
     sizes="196x196" />
   <link rel="icon" type="image/svg" href="./static/images/pku.svg"
     sizes="192x192" />
   <link rel="icon" type="image/svg" href="./static/images/pku.svg" sizes="128x128" />
   <link rel="icon" type="image/svg" href="./static/images/pku.svg" sizes="96x96" />
   <link rel="icon" type="image/svg" href="./static/images/pku.svg" sizes="32x32" />
-  <link rel="icon" type="image/svg" href="./static/images/pku.svg" sizes="16x16" />
+  <link rel="icon" type="image/svg" href="./static/images/pku.svg" sizes="16x16" /> -->
 
   <link rel="mask-icon" href="./static/images/pku.svg" color="#ffffff">
   <meta name="application-name" content="Stanford University" />
@@ -94,7 +94,7 @@
         HDFlow
       </h1>
       <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 2rem;">
-        Hierarchical Diffusion-Flow Planning for Long-horizon Robotic Assembly
+        Hierarchical Diffusion-Flow Planning for Long-horizon Tasks
       </h1>
       <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.2rem; opacity: 80%;">
         Under Review
@@ -261,7 +261,7 @@
         <h2 class="title is-1 has-text-centered is-size-4-mobile">Abstract</h2>
         <div class="content">
           <p>
-            Long-horizon manipulation tasks represent a significant challenge in robotics, demanding both strategic, high-level reasoning and fast, precise, low-level control. While recent advances in generative models have shown promise in generating behavior plans for long-horizon tasks, they often lack a principled framework for hierarchical decomposition and struggle with the computational demands of real-time execution, due to their iterative denoising process. In this work, we introduce <strong>Hierarchical Diffusion-Flow</strong> (<strong>HDFlow</strong>), a novel hierarchical planning framework that optimally leverages the strengths of <em>diffusion</em> and <em>rectified flow</em> models. <strong>HDFlow</strong> employs a high-level diffusion planner to generate sequences of strategic subgoals in a learned latent space, capitalizing on diffusion's powerful exploratory capabilities. These subgoals then guide a low-level rectified flow planner that generates smooth and dense trajectories, exploiting the speed and efficiency of ordinary differential equation (ODE)-based trajectory generation. This hybrid approach synergistically combines the strengths of both models to overcome the limitations of single-paradigm generative planners, enabling robust and efficient long-horizon planning. We evaluate <strong>HDFlow</strong> on four challenging furniture assembly tasks in both simulation and real-world, where it significantly outperforms state-of-the-art methods.</a>
+            Recent advances in generative models have shown promise in generating behavior plans for long-horizon, sparse reward tasks. While these approaches have achieved promising results, they often lack a principled framework for hierarchical decomposition and struggle with the computational demands of real-time execution, due to their iterative denoising process. In this work, we introduce Hierarchical Diffusion-Flow (HDFlow), a novel hierarchical planning framework that optimally leverages the strengths of diffusion and rectified flow models to overcome the limitations of single-paradigm generative planners. HDFlow employs a high-level diffusion planner to generate sequences of strategic subgoals in a learned latent space, capitalizing on diffusion's powerful exploratory capabilities. These subgoals then guide a low-level rectified flow planner that generates smooth and dense trajectories, exploiting the speed and efficiency of ordinary differential equation (ODE)-based trajectory generation. We evaluate HDFlow on four challenging furniture assembly tasks in both simulation and real-world, where it significantly outperforms state-of-the-art methods. Furthermore, we also showcase our method's generality on two long-horizon benchmarks comprising diverse locomotion and manipulation tasks.</a>
           </p>
         </div>
       </div>
@@ -677,14 +677,6 @@
             <h3 class="title is-4">Cube Triple</h3>
             <video poster="" id="cube-triple" autoplay loop muted playsinline height="100%">
               <source src="./static/videos/ogbench/cube-triple.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h3 class="title is-4">Cube Quadruple</h3>
-            <video poster="" id="cube-quadruple" autoplay loop muted playsinline height="100%">
-              <source src="./static/videos/ogbench/cube-quadruple.mp4" type="video/mp4">
             </video>
           </div>
         </div>
