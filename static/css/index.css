@@ -1,182 +1,321 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
+/* ============================================================
+   HDFlow — MomaGraph-inspired stylesheet
+   ============================================================ */
+
+* {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-
-.footer .icon-link {
-    font-size: 25px;
-    color: #000;
-}
-
-.link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.dnerf {
-  font-variant: small-caps;
-}
-
-
-.teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.teaser {
-  font-family: 'Google Sans', sans-serif;
-}
-
-
-.publication-title {
-}
-
-.publication-banner {
-  max-height: parent;
-
-}
-
-.publication-banner video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  object-fit: fit;
-}
-
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-}
-
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
-.author-block {
-  display: inline-block;
-}
-
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
-}
-
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.publication-body img {
-}
-
-.results-carousel {
-  overflow: hidden;
-}
-
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
-}
-
-.results-carousel video {
+body, html {
+  background-color: #fdfdfd;
+  color: rgb(54, 54, 54);
   margin: 0;
+  padding: 0;
+  font-size: 1em;
 }
 
-
-.interpolation-panel {
-  background: #f5f5f5;
-  border-radius: 10px;
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.interpolation-panel .interpolation-image {
+h2 {
+  margin-top: 48px;
+  font-weight: bold !important;
+  color: #FDB515;
+  font-size: 1.8em;
+}
+
+h3 {
+  color: #FDB515;
+  font-size: 1.3em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   CONTENT WRAPPER
+   ============================================================ */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 48px;
+  margin-bottom: 64px;
+  padding: 0 20px;
+}
+
+.abstract {
+  max-width: 940px;
+  margin: auto;
+}
+
+.hr {
+  height: 1px;
+  background-color: #d6dbdf;
+  max-width: 960px;
+  margin: 48px auto;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.60);
+  z-index: 2;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 10;
   width: 100%;
-  border-radius: 5px;
+  padding: 3rem 1.5rem;
 }
 
-.interpolation-video-column {
+/* ============================================================
+   CONFERENCE BADGE
+   ============================================================ */
+@keyframes badgePulse {
+  0%   { box-shadow: 0 4px 12px rgba(253, 181, 21, 0.2); transform: scale(1); }
+  50%  { box-shadow: 0 6px 20px rgba(253, 181, 21, 0.5); transform: scale(1.025); }
+  100% { box-shadow: 0 4px 12px rgba(253, 181, 21, 0.2); transform: scale(1); }
 }
 
-.interpolation-panel .slider {
-  margin: 0 !important;
+.conference-badge {
+  animation: badgePulse 2s ease-in-out infinite;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FDB515, #f8cf5b);
+  color: #1a1a1a;
+  padding: 10px 22px;
+  border-radius: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-family: "Palatino Linotype", Palatino, serif;
 }
 
-.interpolation-panel .slider {
-  margin: 0 !important;
+/* ============================================================
+   HERO LINK BUTTONS
+   ============================================================ */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
 }
 
-#interpolation-image-wrapper {
+.hero-btn {
+  background-color: rgba(43, 43, 43, 0.82);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Palatino Linotype", Palatino, serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: rgba(70, 70, 70, 0.9);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  color: white;
+  text-decoration: none;
+}
+
+.hero-btn.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+}
+
+.hero-btn img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(10);
+}
+
+/* ============================================================
+   AUTHORS IN HERO
+   ============================================================ */
+.hero-authors {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-authors p {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+.hero-authors a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.hero-authors a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.hero-affiliations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.hero-affil-item {
+  text-align: center;
+  color: white;
+  font-size: 0.92rem;
+}
+
+.hero-affil-item sup {
+  color: #FDB515;
+  font-weight: 700;
+}
+
+.hero-equal-note {
+  font-size: 0.88rem;
+  color: rgba(240, 240, 240, 0.88);
+  text-align: center;
+  margin-top: 14px;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* ============================================================
+   VIDEO GRIDS (content sections)
+   ============================================================ */
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.video-cell {
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.video-cell video {
   width: 100%;
+  border-radius: 6px;
+  display: block;
 }
-#interpolation-image-wrapper img {
-  border-radius: 5px;
+
+.video-cell span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #555;
 }
 
-
-.has-bg-img { 
-  background: url('/static/images/toss.jpeg')center center;
-   background-size:cover; }
-
-
-
-.overlay {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black */
-z-index: 1; /* Make sure it's behind the text */
-transition: opacity 1.0s;
+.video-group-label {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  text-align: left;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
 }
-  
-.hero-body,
-.hero-head,
-.hero-foot {
-  z-index: 2; /* Ensure text is above the overlay */
-  transition: opacity 1.0s;
+
+.video-group {
+  margin-bottom: 32px;
 }
+
+/* ============================================================
+   BIBTEX
+   ============================================================ */
+.bibtexsection {
+  padding: 16px 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  white-space: pre;
+  background-color: #f4f4f4;
+  text-align: left;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 12px auto 0;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background-color: #efeff3;
+  width: 100%;
+  margin-top: 32px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.88em;
+  color: #666;
+}
+
+footer a {
+  color: #1a73e8;
+}
+
+/* ============================================================
+   HERO VIDEO QUADRANTS (Bulma compat)
+   ============================================================ */
+.hero.is-fullheight {
+  min-height: 100vh;
+}
+
+.hero-head, .hero-foot {
+  position: relative;
+  z-index: 10;
+}
+
+/* Override Bulma section padding */
+.section { padding: 0 !important; }
