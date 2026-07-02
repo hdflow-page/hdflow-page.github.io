@@ -2,21 +2,52 @@
    HDFlow — MomaGraph-inspired stylesheet
    ============================================================ */
 
-* {
+/* Minimal reset (no Bulma dependency) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-body, html {
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
   background-color: #fdfdfd;
   color: rgb(54, 54, 54);
-  margin: 0;
-  padding: 0;
   font-size: 1em;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  font-size: 0.72em;
+  vertical-align: super;
+  line-height: 0;
 }
 
 h1, h2, h3, h4, h5 {
   text-align: center;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 h2 {
@@ -306,16 +337,14 @@ footer a {
 }
 
 /* ============================================================
-   HERO VIDEO QUADRANTS (Bulma compat)
+   HERO BASE
    ============================================================ */
-.hero.is-fullheight {
-  min-height: 100vh;
-}
-
-.hero-head, .hero-foot {
+.hero {
   position: relative;
-  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-
-/* Override Bulma section padding */
-.section { padding: 0 !important; }
